@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grocery Inventory - Login</title>
+</head>
+
+<body>
+
+    <h1>Grocery Inventory Management System</h1>
+
+    <h2>Login</h2>
+
+    <label>Username:</label>
+    <br>
+    <input type="text" id="username">
+
+    <br><br>
+
+    <label>Password:</label>
+    <br>
+    <input type="password" id="password">
+
+    <br><br>
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+
+
+    <script>
+
+        function login() {
+
+            let username =
+                document.getElementById("username").value;
+
+            let password =
+                document.getElementById("password").value;
+
+            if (username == "admin" && password == "1234") {
+
+                document.getElementById("message").innerHTML =
+                    "Login Successful!";
+
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 1000);
+
+            } else {
+
+                document.getElementById("message").innerHTML =
+                    "Invalid Username or Password";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
